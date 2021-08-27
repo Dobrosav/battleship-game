@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship-game</title>
+    <script src="battleship-script.js"></script>
+    <link rel="stylesheet" href="battleship-style.css">
+</head>
+<body onload="restorematrix()"> 
+    <p id="user1"></p>
+    <p id="user2"></p>
+    <table id="pl1" border="1">
+        <tr>
+            <td></td>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+            <td>h</td>
+            <td>i</td>
+            <td>j</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="00" onclick="fire(0,0)"></td>
+            <td id="01" onclick="fire(0,1)"></td>
+            <td id="02" onclick="fire(0,2)"></td>
+            <td id="03" onclick="fire(0,3)"></td>
+            <td id="04" onclick="fire(0,4)"></td>
+            <td id="05" onclick="fire(0,5)"></td>
+            <td id="06" onclick="fire(0,6)"></td>
+            <td id="07" onclick="fire(0,7)"></td>
+            <td id="08" onclick="fire(0,8)" ></td>
+            <td id="09" onclick="fire(0,9)"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="10" onclick="fire(1,0)" ></td>
+            <td id="11" onclick="fire(1,1)" ></td>
+            <td id="12" onclick="fire(1,2)" ></td>
+            <td id="13" onclick="fire(1,3)" ></td>
+            <td id="14" onclick="fire(1,4)" ></td>
+            <td id="15" onclick="fire(1,5)" ></td>
+            <td id="16" onclick="fire(1,6)" ></td>
+            <td id="17" onclick="fire(1,7)" ></td>
+            <td id="18" onclick="fire(1,8)" ></td>
+            <td id="19" onclick="fire(1,9)"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="20" onclick="fire(2,0)" ></td>
+            <td id="21" onclick="fire(2,1)" ></td>
+            <td id="22" onclick="fire(2,2)" ></td>
+            <td id="23" onclick="fire(2,3)" ></td>
+            <td id="24" onclick="fire(2,4)" ></td>
+            <td id="25" onclick="fire(2,5)" ></td>
+            <td id="26" onclick="fire(2,6)"></td>
+            <td id="27" onclick="fire(2,7)" ></td>
+            <td id="28" onclick="fire(2,8)" ></td>
+            <td id="29" onclick="fire(2,9)" ></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="30" onclick="fire(3,0)"></td>
+            <td id="31" onclick="fire(3,1)"></td>
+            <td id="32" onclick="fire(3,2)"></td>
+            <td id="33" onclick="fire(3,3)"></td>
+            <td id="34" onclick="fire(3,4)"></td>
+            <td id="35" onclick="fire(3,5)"></td>
+            <td id="36" onclick="fire(3,6)"></td>
+            <td id="37" onclick="fire(3,7)"></td>
+            <td id="38" onclick="fire(3,8)"></td>
+            <td id="39" onclick="fire(3,9)"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="40" onclick="fire(4,0)"></td>
+            <td id="41" onclick="fire(4,1)" ></td>
+            <td id="42" onclick="fire(4,2)"></td>
+            <td id="43" onclick="fire(4,3)"></td>
+            <td id="44" onclick="fire(4,4)"></td>
+            <td id="45" onclick="fire(4,5)"></td>
+            <td id="46" onclick="fire(4,6)"></td>
+            <td id="47" onclick="fire(4,7)"></td>
+            <td id="48" onclick="fire(4,8)"></td>
+            <td id="49" onclick="fire(4,9)"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="50" onclick="fire(5,0)"></td>
+            <td id="51" onclick="fire(5,1)"></td>
+            <td id="52" onclick="fire(5,2)"></td>
+            <td id="53" onclick="fire(5,3)"></td>
+            <td id="54" onclick="fire(5,4)"></td>
+            <td id="55" onclick="fire(5,5)"></td>
+            <td id="56" onclick="fire(5,6)"></td>
+            <td id="57" onclick="fire(5,7)"></td>
+            <td id="58" onclick="fire(5,8)"></td>
+            <td id="59" onclick="fire(5,9)"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="60" onclick="fire(6,0)"></td>
+            <td id="61" onclick="fire(6,1)"></td>
+            <td id="62" onclick="fire(6,2)"></td>
+            <td id="63" onclick="fire(6,3)"></td>
+            <td id="64" onclick="fire(6,4)"></td>
+            <td id="65" onclick="fire(6,5)"></td>
+            <td id="66" onclick="fire(6,6)"></td>
+            <td id="67" onclick="fire(6,7)"></td>
+            <td id="68" onclick="fire(6,8)"></td>
+            <td id="69" onclick="fire(6,9)"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td id="70" onclick="fire(7,0)"></td>
+            <td id="71" onclick="fire(7,1)"></td>
+            <td id="72" onclick="fire(7,2)"></td>
+            <td id="73" onclick="fire(7,3)"></td>
+            <td id="74" onclick="fire(7,4)"></td>
+            <td id="75" onclick="fire(7,5)"></td>
+            <td id="76" onclick="fire(7,6)"></td>
+            <td id="77" onclick="fire(7,7)"></td>
+            <td id="78" onclick="fire(7,8)"></td>
+            <td id="79" onclick="fire(7,9)"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td id="80" onclick="fire(8,0)"></td>
+            <td id="81" onclick="fire(8,1)"></td>
+            <td id="82" onclick="fire(8,2)"></td>
+            <td id="83" onclick="fire(8,3)"></td>
+            <td id="84" onclick="fire(8,4)"></td>
+            <td id="85" onclick="fire(8,5)"></td>
+            <td id="86" onclick="fire(8,6)"></td>
+            <td id="87" onclick="fire(8,7)"></td>
+            <td id="88" onclick="fire(8,8)"></td>
+            <td id="89" onclick="fire(8,9)"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="90" onclick="fire(9,0)"></td>
+            <td id="91" onclick="fire(9,1)"></td>
+            <td id="92" onclick="fire(9,2)"></td>
+            <td id="93" onclick="fire(9,3)"></td>
+            <td id="94" onclick="fire(9,4)"></td>
+            <td id="95" onclick="fire(9,5)"></td>
+            <td id="96" onclick="fire(9,6)"></td>
+            <td id="97" onclick="fire(9,7)"></td>
+            <td id="98" onclick="fire(9,8)"></td>
+            <td id="99" onclick="fire(9,9)"></td>
+        </tr>
+    </table>
+    <p id="user2"></p>
+    <table id="pl2" border="1">
+        <tr>
+            <td></td>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+            <td>h</td>
+            <td>i</td>
+            <td>j</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="00y" onclick="fire2(0,0)"></td>
+            <td id="01y" onclick="fire2(0,1)"></td>
+            <td id="02y" onclick="fire2(0,2)"></td>
+            <td id="03y" onclick="fire2(0,3)"></td>
+            <td id="04y" onclick="fire2(0,4)"></td>
+            <td id="05y" onclick="fire2(0,5)"></td>
+            <td id="06y" onclick="fire2(0,6)"></td>
+            <td id="07y" onclick="fire2(0,7)"></td>
+            <td id="08y" onclick="fire2(0,8)"></td>
+            <td id="09y" onclick="fire2(0,9)"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="10y" onclick="fire2(1,0)"></td>
+            <td id="11y" onclick="fire2(1,1)"></td>
+            <td id="12y" onclick="fire2(1,2)"></td>
+            <td id="13y" onclick="fire2(1,3)"></td>
+            <td id="14y" onclick="fire2(1,4)"></td>
+            <td id="15y" onclick="fire2(1,5)"></td>
+            <td id="16y" onclick="fire2(1,6)"></td>
+            <td id="17y" onclick="fire2(1,7)"></td>
+            <td id="18y" onclick="fire2(1,8)"></td>
+            <td id="19y" onclick="fire2(1,9)"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="20y" onclick="fire2(2,0)"></td>
+            <td id="21y" onclick="fire2(2,1)"></td>
+            <td id="22y" onclick="fire2(2,2)"></td>
+            <td id="23y" onclick="fire2(2,3)"></td>
+            <td id="24y" onclick="fire2(2,4)"></td>
+            <td id="25y" onclick="fire2(2,5)"></td>
+            <td id="26y" onclick="fire2(2,6)"></td>
+            <td id="27y" onclick="fire2(2,7)"></td>
+            <td id="28y" onclick="fire2(2,8)"></td>
+            <td id="29y" onclick="fire2(2,9)"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="30y" onclick="fire2(3,0)"></td>
+            <td id="31y" onclick="fire2(3,1)"></td>
+            <td id="32y" onclick="fire2(3,2)"></td>
+            <td id="33y" onclick="fire2(3,3)"></td>
+            <td id="34y" onclick="fire2(3,4)"></td>
+            <td id="35y" onclick="fire2(3,5)"></td>
+            <td id="36y" onclick="fire2(3,6)"></td>
+            <td id="37y" onclick="fire2(3,7)"></td>
+            <td id="38y" onclick="fire2(3,8)"></td>
+            <td id="39y" onclick="fire2(3,9)"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="40y" onclick="fire2(4,0)"></td>
+            <td id="41y" onclick="fire2(4,1)"></td>
+            <td id="42y" onclick="fire2(4,2)"></td>
+            <td id="43y" onclick="fire2(4,3)"></td>
+            <td id="44y" onclick="fire2(4,4)"></td>
+            <td id="45y" onclick="fire2(4,5)"></td>
+            <td id="46y" onclick="fire2(4,6)"></td>
+            <td id="47y" onclick="fire2(4,7)"></td>
+            <td id="48y" onclick="fire2(4,8)"></td>
+            <td id="49y" onclick="fire2(4,9)"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="50y" onclick="fire2(5,0)"></td>
+            <td id="51y" onclick="fire2(5,1)"></td>
+            <td id="52y" onclick="fire2(5,2)"></td>
+            <td id="53y" onclick="fire2(5,3)"></td>
+            <td id="54y" onclick="fire2(5,4)"></td>
+            <td id="55y" onclick="fire2(5,5)"></td>
+            <td id="56y" onclick="fire2(5,6)"></td>
+            <td id="57y" onclick="fire2(5,7)"></td>
+            <td id="58y" onclick="fire2(5,8)"></td>
+            <td id="59y" onclick="fire2(5,9)"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="60y" onclick="fire2(6,0)"></td>
+            <td id="61y" onclick="fire2(6,1)"></td>
+            <td id="62y" onclick="fire2(6,2)"></td>
+            <td id="63y" onclick="fire2(6,3)"></td>
+            <td id="64y" onclick="fire2(6,4)"></td>
+            <td id="65y" onclick="fire2(6,5)"></td>
+            <td id="66y" onclick="fire2(6,6)"></td>
+            <td id="67y" onclick="fire2(6,7)"></td>
+            <td id="68y" onclick="fire2(6,8)"></td>
+            <td id="69y" onclick="fire2(6,9)"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td id="70y" onclick="fire2(7,0)"></td>
+            <td id="71y" onclick="fire2(7,1)"></td>
+            <td id="72y" onclick="fire2(7,2)"></td>
+            <td id="73y" onclick="fire2(7,3)"></td>
+            <td id="74y" onclick="fire2(7,4)"></td>
+            <td id="75y" onclick="fire2(7,5)"></td>
+            <td id="76y" onclick="fire2(7,6)"></td>
+            <td id="77y" onclick="fire2(7,7)"></td>
+            <td id="78y" onclick="fire2(7,8)"></td>
+            <td id="79y" onclick="fire2(7,9)"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td id="80y" onclick="fire2(8,0)"></td>
+            <td id="81y" onclick="fire2(8,1)"></td>
+            <td id="82y" onclick="fire2(8,2)"></td>
+            <td id="83y" onclick="fire2(8,3)"></td>
+            <td id="84y" onclick="fire2(8,4)"></td>
+            <td id="85y" onclick="fire2(8,5)"></td>
+            <td id="86y" onclick="fire2(8,6)"></td>
+            <td id="87y" onclick="fire2(8,7)"></td>
+            <td id="88y" onclick="fire2(8,8)"></td>
+            <td id="89y" onclick="fire2(8,9)"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="90y" onclick="fire2(9,0)"></td>
+            <td id="91y" onclick="fire2(9,1)"></td>
+            <td id="92y" onclick="fire2(9,2)"></td>
+            <td id="93y" onclick="fire2(9,3)"></td>
+            <td id="94y" onclick="fire2(9,4)"></td>
+            <td id="95y" onclick="fire2(9,5)"></td>
+            <td id="96y" onclick="fire2(9,6)"></td>
+            <td id="97y" onclick="fire2(9,7)"></td>
+            <td id="98y" onclick="fire2(9,8)"></td>
+            <td id="99y" onclick="fire2(9,9)"></td>
+        </tr>
+    </table>
+</body>
+</html>

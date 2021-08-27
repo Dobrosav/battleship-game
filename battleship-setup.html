@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship-setup</title>
+    <script src="battleship-script.js"></script>
+    <link rel="stylesheet" href="battleship-style.css">
+</head>
+<body onload="generate()">
+    <p id="user1"></p>
+    <p id="player2stats"></p>
+    <table id="pl1" border="1">
+        <tr>
+            <td></td>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+            <td>h</td>
+            <td>i</td>
+            <td>j</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="00" onmousedown="mousdwn(0,0)" onmouseup="mousup(0,0)"></td>
+            <td id="01" onmousedown="mousdwn(0,1)" onmouseup="mousup(0,1)"></td>
+            <td id="02" onmousedown="mousdwn(0,2)" onmouseup="mousup(0,2)"></td>
+            <td id="03" onmousedown="mousdwn(0,3)" onmouseup="mousup(0,3)"></td>
+            <td id="04" onmousedown="mousdwn(0,4)" onmouseup="mousup(0,4)"></td>
+            <td id="05" onmousedown="mousdwn(0,5)" onmouseup="mousup(0,5)"></td>
+            <td id="06" onmousedown="mousdwn(0,6)" onmouseup="mousup(0,6)"></td>
+            <td id="07" onmousedown="mousdwn(0,7)" onmouseup="mousup(0,7)"></td>
+            <td id="08" onmousedown="mousdwn(0,8)" onmouseup="mousup(0,8)"></td>
+            <td id="09" onmousedown="mousdwn(0,9)" onmouseup="mousup(0,9)"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="10" onmousedown="mousdwn(1,0)" onmouseup="mousup(1,0)"></td>
+            <td id="11" onmousedown="mousdwn(1,1)" onmouseup="mousup(1,1)"></td>
+            <td id="12" onmousedown="mousdwn(1,2)" onmouseup="mousup(1,2)"></td>
+            <td id="13" onmousedown="mousdwn(1,3)" onmouseup="mousup(1,3)"></td>
+            <td id="14" onmousedown="mousdwn(1,4)" onmouseup="mousup(1,4)"></td>
+            <td id="15" onmousedown="mousdwn(1,5)" onmouseup="mousup(1,5)"></td>
+            <td id="16" onmousedown="mousdwn(1,6)" onmouseup="mousup(1,6)"></td>
+            <td id="17" onmousedown="mousdwn(1,7)" onmouseup="mousup(1,7)"></td>
+            <td id="18" onmousedown="mousdwn(1,8)" onmouseup="mousup(1,8)"></td>
+            <td id="19" onmousedown="mousdwn(1,9)" onmouseup="mousup(1,9)"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="20" onmousedown="mousdwn(2,0)" onmouseup="mousup(2,0)"></td>
+            <td id="21" onmousedown="mousdwn(2,1)" onmouseup="mousup(2,1)"></td>
+            <td id="22" onmousedown="mousdwn(2,2)" onmouseup="mousup(2,2)"></td>
+            <td id="23" onmousedown="mousdwn(2,3)" onmouseup="mousup(2,3)"></td>
+            <td id="24" onmousedown="mousdwn(2,4)" onmouseup="mousup(2,4)"></td>
+            <td id="25" onmousedown="mousdwn(2,5)" onmouseup="mousup(2,5)"></td>
+            <td id="26" onmousedown="mousdwn(2,6)" onmouseup="mousup(2,6)"></td>
+            <td id="27" onmousedown="mousdwn(2,7)" onmouseup="mousup(2,7)"></td>
+            <td id="28" onmousedown="mousdwn(2,8)" onmouseup="mousup(2,8)"></td>
+            <td id="29" onmousedown="mousdwn(2,9)" onmouseup="mousup(2,9)"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="30" onmousedown="mousdwn(3,0)" onmouseup="mousup(3,0)"></td>
+            <td id="31" onmousedown="mousdwn(3,1)" onmouseup="mousup(3,1)"></td>
+            <td id="32" onmousedown="mousdwn(3,2)" onmouseup="mousup(3,2)"></td>
+            <td id="33" onmousedown="mousdwn(3,3)" onmouseup="mousup(3,3)"></td>
+            <td id="34" onmousedown="mousdwn(3,4)" onmouseup="mousup(3,4)"></td>
+            <td id="35" onmousedown="mousdwn(3,5)" onmouseup="mousup(3,5)"></td>
+            <td id="36" onmousedown="mousdwn(3,6)" onmouseup="mousup(3,6)"></td>
+            <td id="37" onmousedown="mousdwn(3,7)" onmouseup="mousup(3,7)"></td>
+            <td id="38" onmousedown="mousdwn(3,8)" onmouseup="mousup(3,8)"></td>
+            <td id="39" onmousedown="mousdwn(3,9)" onmouseup="mousup(3,9)"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="40" onmousedown="mousdwn(4,0)" onmouseup="mousup(4,0)"></td>
+            <td id="41" onmousedown="mousdwn(4,1)" onmouseup="mousup(4,1)"></td>
+            <td id="42" onmousedown="mousdwn(4,2)" onmouseup="mousup(4,2)"></td>
+            <td id="43" onmousedown="mousdwn(4,3)" onmouseup="mousup(4,3)"></td>
+            <td id="44" onmousedown="mousdwn(4,4)" onmouseup="mousup(4,4)"></td>
+            <td id="45" onmousedown="mousdwn(4,5)" onmouseup="mousup(4,5)"></td>
+            <td id="46" onmousedown="mousdwn(4,6)" onmouseup="mousup(4,6)"></td>
+            <td id="47" onmousedown="mousdwn(4,7)" onmouseup="mousup(4,7)"></td>
+            <td id="48" onmousedown="mousdwn(4,8)" onmouseup="mousup(4,8)"></td>
+            <td id="49" onmousedown="mousdwn(4,9)" onmouseup="mousup(4,9)"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="50" onmousedown="mousdwn(5,0)" onmouseup="mousup(5,0)"></td>
+            <td id="51" onmousedown="mousdwn(5,1)" onmouseup="mousup(5,1)"></td>
+            <td id="52" onmousedown="mousdwn(5,2)" onmouseup="mousup(5,2)"></td>
+            <td id="53" onmousedown="mousdwn(5,3)" onmouseup="mousup(5,3)"></td>
+            <td id="54" onmousedown="mousdwn(5,4)" onmouseup="mousup(5,4)"></td>
+            <td id="55" onmousedown="mousdwn(5,5)" onmouseup="mousup(5,5)"></td>
+            <td id="56" onmousedown="mousdwn(5,6)" onmouseup="mousup(5,6)"></td>
+            <td id="57" onmousedown="mousdwn(5,7)" onmouseup="mousup(5,7)"></td>
+            <td id="58" onmousedown="mousdwn(5,8)" onmouseup="mousup(5,8)"></td>
+            <td id="59" onmousedown="mousdwn(5,9)" onmouseup="mousup(5,9)"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="60" onmousedown="mousdwn(6,0)" onmouseup="mousup(6,0)"></td>
+            <td id="61" onmousedown="mousdwn(6,1)" onmouseup="mousup(6,1)"></td>
+            <td id="62" onmousedown="mousdwn(6,2)" onmouseup="mousup(6,2)"></td>
+            <td id="63" onmousedown="mousdwn(6,3)" onmouseup="mousup(6,3)"></td>
+            <td id="64" onmousedown="mousdwn(6,4)" onmouseup="mousup(6,4)"></td>
+            <td id="65" onmousedown="mousdwn(6,5)" onmouseup="mousup(6,5)"></td>
+            <td id="66" onmousedown="mousdwn(6,6)" onmouseup="mousup(6,6)"></td>
+            <td id="67" onmousedown="mousdwn(6,7)" onmouseup="mousup(6,7)"></td>
+            <td id="68" onmousedown="mousdwn(6,8)" onmouseup="mousup(6,8)"></td>
+            <td id="69" onmousedown="mousdwn(6,9)" onmouseup="mousup(6,9)"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td id="70" onmousedown="mousdwn(7,0)" onmouseup="mousup(7,0)"></td>
+            <td id="71" onmousedown="mousdwn(7,1)" onmouseup="mousup(7,1)"></td>
+            <td id="72" onmousedown="mousdwn(7,2)" onmouseup="mousup(7,2)"></td>
+            <td id="73" onmousedown="mousdwn(7,3)" onmouseup="mousup(7,3)"></td>
+            <td id="74" onmousedown="mousdwn(7,4)" onmouseup="mousup(7,4)"></td>
+            <td id="75" onmousedown="mousdwn(7,5)" onmouseup="mousup(7,5)"></td>
+            <td id="76" onmousedown="mousdwn(7,6)" onmouseup="mousup(7,6)"></td>
+            <td id="77" onmousedown="mousdwn(7,7)" onmouseup="mousup(7,7)"></td>
+            <td id="78" onmousedown="mousdwn(7,8)" onmouseup="mousup(7,8)"></td>
+            <td id="79" onmousedown="mousdwn(7,9)" onmouseup="mousup(7,9)"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td id="80" onmousedown="mousdwn(8,0)" onmouseup="mousup(8,0)"></td>
+            <td id="81" onmousedown="mousdwn(8,1)" onmouseup="mousup(8,1)"></td>
+            <td id="82" onmousedown="mousdwn(8,2)" onmouseup="mousup(8,2)"></td>
+            <td id="83" onmousedown="mousdwn(8,3)" onmouseup="mousup(8,3)"></td>
+            <td id="84" onmousedown="mousdwn(8,4)" onmouseup="mousup(8,4)"></td>
+            <td id="85" onmousedown="mousdwn(8,5)" onmouseup="mousup(8,5)"></td>
+            <td id="86" onmousedown="mousdwn(8,6)" onmouseup="mousup(8,6)"></td>
+            <td id="87" onmousedown="mousdwn(8,7)" onmouseup="mousup(8,7)"></td>
+            <td id="88" onmousedown="mousdwn(8,8)" onmouseup="mousup(8,8)"></td>
+            <td id="89" onmousedown="mousdwn(8,9)" onmouseup="mousup(8,9)"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="90" onmousedown="mousdwn(9,0)" onmouseup="mousup(9,0)"></td>
+            <td id="91" onmousedown="mousdwn(9,1)" onmouseup="mousup(9,1)"></td>
+            <td id="92" onmousedown="mousdwn(9,2)" onmouseup="mousup(9,2)"></td>
+            <td id="93" onmousedown="mousdwn(9,3)" onmouseup="mousup(9,3)"></td>
+            <td id="94" onmousedown="mousdwn(9,4)" onmouseup="mousup(9,4)"></td>
+            <td id="95" onmousedown="mousdwn(9,5)" onmouseup="mousup(9,5)"></td>
+            <td id="96" onmousedown="mousdwn(9,6)" onmouseup="mousup(9,6)"></td>
+            <td id="97" onmousedown="mousdwn(9,7)" onmouseup="mousup(9,7)"></td>
+            <td id="98" onmousedown="mousdwn(9,8)" onmouseup="mousup(9,8)"></td>
+            <td id="99" onmousedown="mousdwn(9,9)" onmouseup="mousup(9,9)"></td>
+        </tr>
+    </table>
+    <p id="user2"></p>
+    <table id="pl2" border="1">
+        <tr>
+            <td></td>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+            <td>h</td>
+            <td>i</td>
+            <td>j</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="00y" onmousedown="mousdwn2(0,0)" onmouseup="mousup2(0,0)"></td>
+            <td id="01y" onmousedown="mousdwn2(0,1)" onmouseup="mousup2(0,1)"></td>
+            <td id="02y" onmousedown="mousdwn2(0,2)" onmouseup="mousup2(0,2)"></td>
+            <td id="03y" onmousedown="mousdwn2(0,3)" onmouseup="mousup2(0,3)"></td>
+            <td id="04y" onmousedown="mousdwn2(0,4)" onmouseup="mousup2(0,4)"></td>
+            <td id="05y" onmousedown="mousdwn2(0,5)" onmouseup="mousup2(0,5)"></td>
+            <td id="06y" onmousedown="mousdwn2(0,6)" onmouseup="mousup2(0,6)"></td>
+            <td id="07y" onmousedown="mousdwn2(0,7)" onmouseup="mousup2(0,7)"></td>
+            <td id="08y" onmousedown="mousdwn2(0,8)" onmouseup="mousup2(0,8)"></td>
+            <td id="09y" onmousedown="mousdwn2(0,9)" onmouseup="mousup2(0,9)"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="10y" onmousedown="mousdwn2(1,0)" onmouseup="mousup2(1,0)"></td>
+            <td id="11y" onmousedown="mousdwn2(1,1)" onmouseup="mousup2(1,1)"></td>
+            <td id="12y" onmousedown="mousdwn2(1,2)" onmouseup="mousup2(1,2)"></td>
+            <td id="13y" onmousedown="mousdwn2(1,3)" onmouseup="mousup2(1,3)"></td>
+            <td id="14y" onmousedown="mousdwn2(1,4)" onmouseup="mousup2(1,4)"></td>
+            <td id="15y" onmousedown="mousdwn2(1,5)" onmouseup="mousup2(1,5)"></td>
+            <td id="16y" onmousedown="mousdwn2(1,6)" onmouseup="mousup2(1,6)"></td>
+            <td id="17y" onmousedown="mousdwn2(1,7)" onmouseup="mousup2(1,7)"></td>
+            <td id="18y" onmousedown="mousdwn2(1,8)" onmouseup="mousup2(1,8)"></td>
+            <td id="19y" onmousedown="mousdwn2(1,9)" onmouseup="mousup2(1,9)"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="20y" onmousedown="mousdwn2(2,0)" onmouseup="mousup2(2,0)"></td>
+            <td id="21y" onmousedown="mousdwn2(2,1)" onmouseup="mousup2(2,1)"></td>
+            <td id="22y" onmousedown="mousdwn2(2,2)" onmouseup="mousup2(2,2)"></td>
+            <td id="23y" onmousedown="mousdwn2(2,3)" onmouseup="mousup2(2,3)"></td>
+            <td id="24y" onmousedown="mousdwn2(2,4)" onmouseup="mousup2(2,4)"></td>
+            <td id="25y" onmousedown="mousdwn2(2,5)" onmouseup="mousup2(2,5)"></td>
+            <td id="26y" onmousedown="mousdwn2(2,6)" onmouseup="mousup2(2,6)"></td>
+            <td id="27y" onmousedown="mousdwn2(2,7)" onmouseup="mousup2(2,7)"></td>
+            <td id="28y" onmousedown="mousdwn2(2,8)" onmouseup="mousup2(2,8)"></td>
+            <td id="29y" onmousedown="mousdwn2(2,9)" onmouseup="mousu2p(2,9)"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="30y" onmousedown="mousdwn2(3,0)" onmouseup="mousup2(3,0)"></td>
+            <td id="31y" onmousedown="mousdwn2(3,1)" onmouseup="mousup2(3,1)"></td>
+            <td id="32y" onmousedown="mousdwn2(3,2)" onmouseup="mousup2(3,2)"></td>
+            <td id="33y" onmousedown="mousdwn2(3,3)" onmouseup="mousup2(3,3)"></td>
+            <td id="34y" onmousedown="mousdwn2(3,4)" onmouseup="mousup2(3,4)"></td>
+            <td id="35y" onmousedown="mousdwn2(3,5)" onmouseup="mousup2(3,5)"></td>
+            <td id="36y" onmousedown="mousdwn2(3,6)" onmouseup="mousup2(3,6)"></td>
+            <td id="37y" onmousedown="mousdwn2(3,7)" onmouseup="mousup2(3,7)"></td>
+            <td id="38y" onmousedown="mousdwn2(3,8)" onmouseup="mousup2(3,8)"></td>
+            <td id="39y" onmousedown="mousdwn2(3,9)" onmouseup="mousup2(3,9)"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="40y" onmousedown="mousdwn2(4,0)" onmouseup="mousup2(4,0)"></td>
+            <td id="41y" onmousedown="mousdwn2(4,1)" onmouseup="mousup2(4,1)"></td>
+            <td id="42y" onmousedown="mousdwn2(4,2)" onmouseup="mousup2(4,2)"></td>
+            <td id="43y" onmousedown="mousdwn2(4,3)" onmouseup="mousup2(4,3)"></td>
+            <td id="44y" onmousedown="mousdwn2(4,4)" onmouseup="mousup2(4,4)"></td>
+            <td id="45y" onmousedown="mousdwn2(4,5)" onmouseup="mousup2(4,5)"></td>
+            <td id="46y" onmousedown="mousdwn2(4,6)" onmouseup="mousup2(4,6)"></td>
+            <td id="47y" onmousedown="mousdwn2(4,7)" onmouseup="mousup2(4,7)"></td>
+            <td id="48y" onmousedown="mousdwn2(4,8)" onmouseup="mousup2(4,8)"></td>
+            <td id="49y" onmousedown="mousdwn2(4,9)" onmouseup="mousup2(4,9)"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="50y" onmousedown="mousdwn2(5,0)" onmouseup="mousup2(5,0)"></td>
+            <td id="51y" onmousedown="mousdwn2(5,1)" onmouseup="mousup2(5,1)"></td>
+            <td id="52y" onmousedown="mousdwn2(5,2)" onmouseup="mousup2(5,2)"></td>
+            <td id="53y" onmousedown="mousdwn2(5,3)" onmouseup="mousup2(5,3)"></td>
+            <td id="54y" onmousedown="mousdwn2(5,4)" onmouseup="mousup2(5,4)"></td>
+            <td id="55y" onmousedown="mousdwn2(5,5)" onmouseup="mousup2(5,5)"></td>
+            <td id="56y" onmousedown="mousdwn2(5,6)" onmouseup="mousup2(5,6)"></td>
+            <td id="57y" onmousedown="mousdwn2(5,7)" onmouseup="mousup2(5,7)"></td>
+            <td id="58y" onmousedown="mousdwn2(5,8)" onmouseup="mousup2(5,8)"></td>
+            <td id="59y" onmousedown="mousdwn2(5,9)" onmouseup="mousup2(5,9)"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="60y" onmousedown="mousdwn2(6,0)" onmouseup="mousu2p(6,0)"></td>
+            <td id="61y" onmousedown="mousdwn2(6,1)" onmouseup="mousup2(6,1)"></td>
+            <td id="62y" onmousedown="mousdwn2(6,2)" onmouseup="mousup2(6,2)"></td>
+            <td id="63y" onmousedown="mousdwn2(6,3)" onmouseup="mousup2(6,3)"></td>
+            <td id="64y" onmousedown="mousdwn2(6,4)" onmouseup="mousup2(6,4)"></td>
+            <td id="65y" onmousedown="mousdwn2(6,5)" onmouseup="mousup2(6,5)"></td>
+            <td id="66y" onmousedown="mousdwn2(6,6)" onmouseup="mousup2(6,6)"></td>
+            <td id="67y" onmousedown="mousdwn2(6,7)" onmouseup="mousup2(6,7)"></td>
+            <td id="68y" onmousedown="mousdwn2(6,8)" onmouseup="mousup2(6,8)"></td>
+            <td id="69y" onmousedown="mousdwn2(6,9)" onmouseup="mousup2(6,9)"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td id="70y" onmousedown="mousdwn2(7,0)" onmouseup="mousup2(7,0)"></td>
+            <td id="71y" onmousedown="mousdwn2(7,1)" onmouseup="mousup2(7,1)"></td>
+            <td id="72y" onmousedown="mousdwn2(7,2)" onmouseup="mousup2(7,2)"></td>
+            <td id="73y" onmousedown="mousdwn2(7,3)" onmouseup="mousup2(7,3)"></td>
+            <td id="74y" onmousedown="mousdwn2(7,4)" onmouseup="mousup2(7,4)"></td>
+            <td id="75y" onmousedown="mousdwn2(7,5)" onmouseup="mousup2(7,5)"></td>
+            <td id="76y" onmousedown="mousdwn2(7,6)" onmouseup="mousup2(7,6)"></td>
+            <td id="77y" onmousedown="mousdwn2(7,7)" onmouseup="mousup2(7,7)"></td>
+            <td id="78y" onmousedown="mousdwn2(7,8)" onmouseup="mousup2(7,8)"></td>
+            <td id="79y" onmousedown="mousdwn2(7,9)" onmouseup="mousup2(7,9)"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td id="80y" onmousedown="mousdwn2(8,0)" onmouseup="mousup2(8,0)"></td>
+            <td id="81y" onmousedown="mousdwn2(8,1)" onmouseup="mousup2(8,1)"></td>
+            <td id="82y" onmousedown="mousdwn2(8,2)" onmouseup="mousup2(8,2)"></td>
+            <td id="83y" onmousedown="mousdwn2(8,3)" onmouseup="mousup2(8,3)"></td>
+            <td id="84y" onmousedown="mousdwn2(8,4)" onmouseup="mousup2(8,4)"></td>
+            <td id="85y" onmousedown="mousdwn2(8,5)" onmouseup="mousup2(8,5)"></td>
+            <td id="86y" onmousedown="mousdwn2(8,6)" onmouseup="mousup2(8,6)"></td>
+            <td id="87y" onmousedown="mousdwn2(8,7)" onmouseup="mousup2(8,7)"></td>
+            <td id="88y" onmousedown="mousdwn2(8,8)" onmouseup="mousup2(8,8)"></td>
+            <td id="89y" onmousedown="mousdwn2(8,9)" onmouseup="mousup2(8,9)"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="90y" onmousedown="mousdwn2(9,0)" onmouseup="mousup2(9,0)"></td>
+            <td id="91y" onmousedown="mousdwn2(9,1)" onmouseup="mousup2(9,1)"></td>
+            <td id="92y" onmousedown="mousdwn2(9,2)" onmouseup="mousup2(9,2)"></td>
+            <td id="93y" onmousedown="mousdwn2(9,3)" onmouseup="mousup2(9,3)"></td>
+            <td id="94y" onmousedown="mousdwn2(9,4)" onmouseup="mousup2(9,4)"></td>
+            <td id="95y" onmousedown="mousdwn2(9,5)" onmouseup="mousup2(9,5)"></td>
+            <td id="96y" onmousedown="mousdwn2(9,6)" onmouseup="mousup2(9,6)"></td>
+            <td id="97y" onmousedown="mousdwn2(9,7)" onmouseup="mousup2(9,7)"></td>
+            <td id="98y" onmousedown="mousdwn2(9,8)" onmouseup="mousup2(9,8)"></td>
+            <td id="99y" onmousedown="mousdwn2(9,9)" onmouseup="mousup2(9,9)"></td>
+        </tr>
+    </table>
+    <p id="data1"></p>
+</body>
+</html>

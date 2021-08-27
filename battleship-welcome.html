@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship-welcome</title>
+    <script src="battleship-script.js"></script>
+    <link rel="stylesheet" href="battleship-style.css">
+</head>
+<body onload="reset()">
+    <h1><center>Welcome to Battleship</center></h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <H2><center>Unesite podatke</center></H2>
+    <form action="#" id="frm1" onsubmit="return Setting()">
+        Ime prvog igraca: <input type="text" pattern="^[a-zA-Z][a-zA-Z0-9_]{3,15}$" required id="ime1" minlength="3" maxlength="15"><br>
+        Ime drugog igraca: <input type="text" pattern="^[a-zA-Z][a-zA-Z0-9_]{3,15}$" required id="ime2" minlength="3" maxlength="15"><br>
+        <button type="submit">Zapocni igru</button>
+    </form>
+</body>
+</html>

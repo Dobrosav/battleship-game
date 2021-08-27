@@ -1,0 +1,3 @@
+Battleship
+Brodovi se stavljaju na polja sa leve na desnu stranu i  od gore ka dole.
+Uzivajte u igri!
